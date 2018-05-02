@@ -1,0 +1,20 @@
+<ion-content class="page">
+  <h1>Geo Fence</h1>
+  <div class="loader"></div>
+
+  <div class="bottom-container">
+    <ion-label color="secondary" id="lbl">MONITORING CURRENTLY ACTIVATED</ion-label>
+
+    <ion-item>
+      <ion-label wrap-text color="primary" id="latitide">startlat:{{startlat}}</ion-label>
+      <ion-label wrap-text color="primary" id="longitude">startlong:{{startlong}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label wrap-text color="primary" id="latitide">Currentlat:{{currentLat}}</ion-label>
+      <ion-label wrap-text color="primary" id="longitude">Currentlong:{{currentLong}}</ion-label>
+    </ion-item>
+    <button ion-button large outline block (click)="removeFence()" id="cta" color="primary">Remove Fence</button>
+    <button ion-button large outline block (click)="GetLocation()" id="gl" color="primary">GetLocation</button>
+    <button ion-button large outline block (click)="CalculateDistance()" id="cd" color="primary">CalculateDistance</button>
+  </div>
+</ion-content>

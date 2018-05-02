@@ -1,0 +1,20 @@
+<ion-content class="page">
+  <h1>Geo Fence</h1>
+  <div class="loader"></div>
+
+  <div class="bottom-container">
+    <ion-item>
+      <ion-label wrap-text color="primary" id="latitide">latitide:{{latitude}}</ion-label>
+      <ion-label wrap-text color="primary" id="longitude">longitude:{{longitude}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="radius" #radiusVal type="text"></ion-input>
+      <!-- <ion-range [(ngModel)]="radius" #radiusVal min="40" max="300" color="primary" pin="true" snaps="true" step="20">      </ion-range> -->
+    </ion-item>
+    <ion-label color="primary" id="lbl">Fence Parameter (Meters)</ion-label>
+    <button ion-button large outline block (click)="setGeofence(radiusVal.value)" id="cta" color="primary">Set Geofence</button>
+    <button ion-button large outline block (click)="GetLocation()" id="gl" color="primary">GetLocations</button>
+    <p *ngIf="error">{{ error }}</p>
+
+  </div>
+</ion-content>
